@@ -1,17 +1,43 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I`m an h1 tag"),
-    React.createElement("h2", {}, "I`m an h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I`m an h1 tag"),
-    React.createElement("h2", {}, "I`m an h2 tag"),
-  ]),
-]);
+const reactElement = React.createElement(
+  "p",
+  { className: "para" },
+  "I am para"
+);
 
-console.log(parent);
+const randomVar = "I am random Variable";
+
+// let elem = "";
+
+const TitleComponent = () => {
+  return (
+    <div className="titlediv">
+      <h1>Namaste From Functional Compoenent</h1>
+    </div>
+  );
+};
+// {elem ? elem : "Not Present"}
+
+var elem = (
+  <div className="elemDiv">
+    Hello {randomVar} {reactElement}
+    <TitleComponent />
+  </div>
+);
+
+const HeadingComponent = () => (
+  <div className="container">
+    {TitleComponent()}
+    <TitleComponent />
+    <TitleComponent>
+      <p>From Insise TitleComponent</p>
+    </TitleComponent>
+    {elem}
+    <p>This is cominng from Heading Component</p>
+  </div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HeadingComponent />);
