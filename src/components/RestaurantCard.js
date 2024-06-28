@@ -16,12 +16,12 @@ const RestaurantCard = (props) => {
       <img className="res-img" src={CDN_URL + cloudinaryImageId} alt="" />
       <div className="res-card-details">
         <h3 className="res-card-name">{name}</h3>
-        <h4 className="res-card-cuisines">{cuisines.slice(0, 2).join(", ")}</h4>
         <div className="res-card-rating">
           <p>{avgRating} stars </p>
           <p> - {deliveryTime} mins</p>
         </div>
-        <h4>{costForTwo}</h4>
+        <p className="res-card-cuisines">{cuisines.slice(0, 3).join(", ")}</p>
+        <p className="res-card-price">{costForTwo}</p>
       </div>
     </div>
   );

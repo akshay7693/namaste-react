@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -56,7 +55,7 @@
 
 .res-card {
   width: 300px;
-  height: 350px;
+  height: 370px;
   border-radius: 20px;
   overflow: hidden;
   /* box-shadow: 0 0 2px rgba(17, 17, 17, 0.507); */
@@ -72,7 +71,7 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 10px;
   font-size: 14px;
   font-weight: normal;
   flex: 1;
@@ -80,21 +79,70 @@
 
 .res-card-name {
   height: 45px;
+  margin-bottom: 5px;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
 }
 
 .res-card-cuisines {
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .res-card-rating {
   display: flex;
   column-gap: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.res-card-price {
+  font-size: medium;
+  font-weight: normal;
 }
 
 .res-img {
   width: 100%;
   height: 200px;
+}
+
+.filter {
+  align-self: flex-start;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px;
+  border-radius: 8px;
+  outline: none;
+  border: 0.5px solid rgb(83, 82, 82);
+  background-color: white;
+  color: rgb(83, 82, 82);
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+  background-color: rgb(83, 82, 82);
+  color: white;
+}
+
+.filter-btn:active {
+  background-color: rgb(83, 82, 82);
+  color: white;
+  transform: scale(0.9);
+}
+
+.filter-btn-selected {
+  background-color: rgb(83, 82, 82);
+  color: white;
+}
+
+.filter-btn-selected:hover {
+  background-color: white;
+  color: rgb(83, 82, 82);
 }
