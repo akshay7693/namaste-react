@@ -1,20 +1,33 @@
 import { useState } from "react";
-import { LOGO_URL as URL_LOGO } from "../utils/constants";
+import { LOGO_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const linkText = "Login";
   const [loginLinkText, setLoginLinkText] = useState(linkText);
+  const onlineStatus = useOnlineStatus();
 
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={URL_LOGO} alt="Brand Logo" />
+        <img className="logo" src={LOGO_URL} alt="Brand Logo" />
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li>Online Status : {onlineStatus ? "✅" : "🔴"}</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
           <li>Cart</li>
           <a
             className="login"

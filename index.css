@@ -2,6 +2,9 @@
   --primary-color: rgb(243, 118, 72);
   --primary-color-shadow: rgba(243, 118, 72, 0.205);
   --secondary-color: white;
+  --border--shadow: rgba(128, 128, 128, 0.329)
+  --border--color: rgba(128, 128, 128, 0.411);
+  --box-shadow: rgba(78, 77, 77, 0.247)
 }
 
 * {
@@ -14,6 +17,10 @@
 
 html {
   background-color: var(--secondary-color);
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 .header {
@@ -106,6 +113,7 @@ html {
   border: none;
   border-bottom: 1px solid rgba(185, 182, 182, 0.479);
   font-weight: 300;
+  caret-color: rgba(80, 78, 78, 0.664);
 }
 
 .search-input::placeholder {
@@ -257,3 +265,139 @@ html {
   width: 100%;
   height: 200px;
 }
+
+.res-detail {
+  width: 800px;
+  margin: 50px auto;
+}
+
+.res-detail-name {
+  font-size: 22px;
+  padding: 5px;
+  font-weight: bolder;
+}
+
+.res-detail-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  border: 1px solid rgba(128, 128, 128, 0.411);
+  box-shadow: 0 8px 16px rgba(128, 128, 128, 0.329);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.res-detail-rating-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.res-detail-rating {
+  font-weight: bolder;
+}
+
+.res-detail-price {
+  font-weight: bolder;
+}
+
+.res-detail-cuisine {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.res-detail-outlet {
+  display: flex;
+  gap: 7px;
+  font-size: 13px;
+}
+
+.res-detail-menu {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.res-detail-menu-list {
+  list-style: none;
+  padding: 5px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.res-detail-menu-card {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--box-shadow);
+  padding-bottom: 20px;
+}
+
+.res-detail-menu-details{
+  padding: 40px;
+  /* font-size: 20px; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 450px;
+}
+
+.res-detail-menu-details > h5 {
+  margin-bottom: 20px;
+}
+
+.res-detail-menu-details > p {
+  font-size: 14px;
+}
+
+.res-detail-menu-img{
+  border-radius: 16px;
+  overflow: hidden;
+  height: 200px;
+  /* width: 400px; */
+}
+.res-detail-menu-img > img {
+  width: 300px;
+  height: 100%;
+}
+
+.about {
+  width: 1000px;
+  margin: 50px auto;
+}
+
+.user-card {
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(78, 77, 77, 0.247) ;
+  padding: 20px;  
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.user-card > h4{
+  cursor: pointer;
+}
+
+.about-card-container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.user-card-view{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  }
+
+  .user-card-flagged{
+    cursor: pointer;
+    color: red;
+  }
